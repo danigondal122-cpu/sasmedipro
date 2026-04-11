@@ -1,0 +1,7 @@
+
+✅ Now Responsibilities Are Clean
+Module	Responsibility
+Sale	Create commercial record
+Delivery	Handle stock movement
+Inventory	Maintain stock
+Payment	Handle money
