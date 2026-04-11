@@ -1,0 +1,39 @@
+.error-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffe5e5;  /* light red background */
+  border: 1px solid #ff4d4f; /* red border */
+  color: #ff1a1a;            /* dark red text */
+  padding: 12px 16px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  animation: fadeIn 0.3s ease-in;
+}
+
+.error-message {
+  flex: 1;
+}
+
+.error-close {
+  background: none;
+  border: none;
+  color: #ff1a1a;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+  line-height: 1;
+}
+
+.error-close:hover {
+  color: #a80000;
+}
+
+/* Simple fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

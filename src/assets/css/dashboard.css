@@ -1,0 +1,44 @@
+
+
+.app-container {
+  display: flex;
+  height: 100vh;   /* ensures full height of viewport */
+  width: 100%;
+   overflow-x: hidden;
+   
+   
+  
+  
+}
+
+
+/* Main content */
+.main-area {
+  flex: 1;                  /* take all remaining horizontal space */
+  display: flex;
+  flex-direction: column;    /* top header + main content */
+  min-height: 100vh;
+  
+  background-color: #d9d9d9; /* dashboard gray */
+}
+
+.clickable {
+  cursor: pointer;          /* shows the pointer hand */
+  user-select: none;        /* prevents text selection when clicked */
+  transition: transform 0.15s ease, color 0.15s ease; /* optional hover effect */
+}
+
+.clickable:hover {
+  transform: scale(1.05);   /* slight zoom on hover */
+  color: #016443;           /* optional color change on hover */
+}
+
+/* Main content below header */
+.main-content {
+  flex: 1;                  /* take all vertical space under header */
+  background-color: #fcfcfc;
+ 
+  min-width: 0;
+
+}
+

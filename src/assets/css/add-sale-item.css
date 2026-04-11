@@ -1,0 +1,97 @@
+.sale-add-item {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.sale-add-item label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.sale-meta-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Equal spacing between all labels */
+}
+
+/* Optional: inputs and selects full width */
+
+
+.sale-add-item select,
+.sale-add-item input {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  min-width: 120px;
+}
+
+.add-item-btn {
+  padding: 8px 12px;
+  background-color:#016443 ; /* emerald green */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.add-item-btn:hover {
+  background-color: #059669;
+}
+
+.sale-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.sale-items-table th,
+.sale-items-table td {
+  border: 1px solid #e5e7eb; /* light gray */
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.sale-items-table th {
+  background-color: #f3f4f6; /* light gray header */
+  color: #374151; /* dark gray text */
+  font-weight: 600;
+}
+
+.sale-items-table tbody tr:nth-child(even) {
+  background-color: #f9fafb; /* alternate row color */
+}
+
+.sale-items-table tbody tr:hover {
+  background-color: #e0f2fe; /* light blue on hover */
+}
+
+.remove-item-btn {
+  padding: 4px 8px;
+  color: #fff;
+  background-color: #ef4444; /* red */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s;
+}
+
+.remove-item-btn:hover {
+  background-color: #dc2626;
+}
+
+.sale-items-table td {
+  vertical-align: middle;
+}
+

@@ -1,0 +1,86 @@
+ALTER TABLE sales
+ADD COLUMN payment_status 
+ENUM('unpaid','partially_paid','paid') 
+DEFAULT 'unpaid' 
+AFTER status;
+
+
+
+
+
+
+
+
+
+ALTER TABLE sale_meta
+ADD COLUMN due_date DATE NULL AFTER uom;
+
+-- 2️⃣ Add a unique constraint on sale_id
+ALTER TABLE sale_meta
+ADD CONSTRAINT unique_sale_meta_sale_id UNIQUE (sale_id);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE `loans` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `loan_no` VARCHAR(50) NOT NULL UNIQUE,
+    `lender_id` BIGINT UNSIGNED NOT NULL,
+    `borrower_id` BIGINT UNSIGNED NOT NULL,
+    `principal_amount` DECIMAL(15,2) NOT NULL,
+    `interest_rate` DECIMAL(5,2) NOT NULL,
+    `total_amount_due` DECIMAL(15,2) NOT NULL,
+    `remaining_balance` DECIMAL(15,2) NOT NULL,
+    `start_date` DATE NOT NULL,
+    `status` ENUM('active','paid','defaulted') NOT NULL DEFAULT 'active',
+    `created_by_id` BIGINT UNSIGNED NOT NULL,
+    `created_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `deleted_at` TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    INDEX `idx_lender_id` (`lender_id`),
+    INDEX `idx_borrower_id` (`borrower_id`),
+    CONSTRAINT `fk_loans_lender` FOREIGN KEY (`lender_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+    CONSTRAINT `fk_loans_borrower` FOREIGN KEY (`borrower_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+    CONSTRAINT `fk_loans_created_by` FOREIGN KEY (`created_by_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+
+
+
+
+
+CREATE TABLE `loan_repayments` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `loan_id` BIGINT UNSIGNED NOT NULL,
+    `amount_paid` DECIMAL(15,2) NOT NULL,
+    `paid_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `created_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`),
+    INDEX `idx_loan_id` (`loan_id`),
+    CONSTRAINT `fk_repayments_loan` FOREIGN KEY (`loan_id`) REFERENCES `loans` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+
+
+
+
+
+
+

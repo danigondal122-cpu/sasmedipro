@@ -1,0 +1,52 @@
+/* =========================
+   DELETE MODAL ACTIONS
+========================= */
+.delete-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* =========================
+   OUTLINE BUTTON (CANCEL)
+========================= */
+.delete-btn-outline {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-btn-outline:hover {
+  background: #f3f4f6;
+}
+
+/* =========================
+   DANGER BUTTON (DELETE)
+========================= */
+.delete-btn-danger {
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-btn-danger:hover {
+  background: #b91c1c;
+}
+
+/* Disabled state */
+.delete-btn-danger:disabled {
+  background: #fca5a5;
+  cursor: not-allowed;
+}

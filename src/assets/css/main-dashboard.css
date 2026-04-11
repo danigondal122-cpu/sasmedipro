@@ -1,0 +1,46 @@
+.dashboard-wrapper {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  height: 100%;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #016443;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  flex: 1;
+  min-width: 200px;
+  background-color: #016443; /* Emerald theme */
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.card-label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.card-value {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.dashboard-loading {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}

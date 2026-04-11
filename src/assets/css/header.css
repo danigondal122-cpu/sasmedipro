@@ -1,0 +1,170 @@
+/* Top header */
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Left side: menu bars + Page List text */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 99999999;
+}
+
+.page-list-text {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+/* Center: search bar */
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+.search-wrapper {
+  position: relative;
+  width: 50%;
+  max-width: 400px;
+}
+
+.header-search {
+  width: 100%;
+  padding: 12px 12px 12px 36px; /* leave space for icon on left */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #999999;
+}
+
+/* Right side: notification, settings, profile */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Profile */
+/* Profile */
+.profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  padding: 8px 0;
+  width: 140px;
+  z-index: 1000;
+}
+
+.profile-dropdown button {
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.profile-dropdown button:hover {
+  background: #f2f2f2;
+}
+
+
+
+/* Modal */
+.logout-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.logout-modal {
+  background: white;
+  padding: 24px;
+  border-radius: 14px;
+  width: 320px;
+  text-align: center;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btn-cancel {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.btn-logout {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #d32f2f;
+  color: white;
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .header-center {
+    display: none; /* hide search bar */
+  }
+
+  .header-right .header-icon.notifications {
+    display: none; /* hide notification icon */
+  }
+}

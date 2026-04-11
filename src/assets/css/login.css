@@ -1,0 +1,61 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/images/warehouse_bg.jpg') no-repeat center center/cover;
+  filter: blur(0px); /* blur effect */
+  z-index: -1;
+}
+
+/* Centered login container */
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.5); /* semi-transparent black for blur effect */
+  backdrop-filter: blur(10px); /* blur background behind container */
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 350px;
+  color: white;
+}
+
+/* Welcome text */
+.welcome-text {
+  color: #4da6ff; /* blue */
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* Input fields */
+.login-form input {
+  width: 90%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Login button */
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4da6ff; /* blue button */
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #3399ff;
+}

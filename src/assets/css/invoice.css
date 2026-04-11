@@ -1,0 +1,284 @@
+.invoice-sheet {
+  width: 794px; /* EXACT A4 width */
+  min-height: 1123px; /* A4 height */
+  padding: 20px 25px;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: #000;
+  background: white;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+
+/* HEADER */
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+  padding-bottom: 8px;
+}
+
+
+
+.logo-block {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.invoice-logo {
+  height: 100px;
+  width: 180px;
+  object-fit: contain;
+  margin-bottom: 24px;
+  margin-top: -18px;
+
+}
+
+
+
+
+.subtitle {
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+
+
+
+
+
+
+.invoice-header-right-grid-column {
+  display: flex;
+  flex-direction: column; /* stack groups vertically */
+  gap: 15px; /* space between the two groups */
+  max-width: 520px;
+}
+
+.invoice-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.invoice-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px; /* space between label and value */
+}
+
+.invoice-label {
+  font-weight: 700;
+  font-size: 9px; /* smaller font for invoice */
+  min-width: 90px; /* fixed width so all labels align vertically */
+}
+
+.invoice-value {
+  font-weight: 300;
+  font-size: 9px;
+  line-height: 1.2;
+}
+
+
+
+
+.invoice-original {
+  font-weight: 600;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+/* CUSTOMER INFO */
+.info-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 58px;
+  line-height: 0.9;
+  padding-bottom: 8px;
+  font-size: 10px;
+}
+
+.cut-frame {
+  position: relative;
+ 
+  padding: 8px;
+}
+
+/* Corner marks */
+.cut-frame::before,
+.cut-frame::after,
+.cut-frame::nth-child(1),
+.cut-frame::nth-child(2) {
+  /* We will actually define each corner separately */
+}
+
+/* Top-left corner */
+.cut-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;   /* horizontal line */
+  height: 2px;
+  background: rgb(0, 0, 0);
+}
+.cut-frame::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;    /* vertical line */
+  height: 12px;
+  background:  rgb(0, 0, 0);
+}
+
+/* Top-right corner */
+.cut-frame .corner-top-right-h {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 2px;
+  background:  rgb(0, 0, 0);
+}
+.cut-frame .corner-top-right-v {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 12px;
+  background:  rgb(0, 0, 0);
+}
+
+/* Bottom-left corner */
+.cut-frame .corner-bottom-left-h {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 12px;
+  height: 2px;
+  background:  rgb(0, 0, 0);
+}
+.cut-frame .corner-bottom-left-v {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 12px;
+  background: rgb(0, 0, 0);
+}
+
+/* Bottom-right corner */
+.cut-frame .corner-bottom-right-h {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 2px;
+  background:  rgb(0, 0, 0);
+}
+.cut-frame .corner-bottom-right-v {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  height: 12px;
+  background:  rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+.grid-item {
+  font-size: 0.9
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.info-grid p {
+  margin: 2px 0;
+}
+
+/* TABLE */
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.invoice-table th,
+.invoice-table td {
+  border: 1px solid #000;
+  padding: 4px;
+  font-size: 11px;
+}
+
+.invoice-table th {
+  font-weight: bold;
+  text-align: center;
+}
+
+.invoice-table td {
+  text-align: center;
+}
+
+/* TOTALS */
+.totals {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.totals h3 {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 25px;
+  font-size: 11px;
+  border-top: 1px solid #000;
+  padding-top: 10px;
+}
+
+.signatures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}

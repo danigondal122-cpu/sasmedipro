@@ -1,0 +1,362 @@
+.data-table-container {
+  
+  padding: 20px 20px;
+  border-radius: 0; /* no rounded corners */
+  margin: 0; /* remove sidebar margins if you want full width */
+  box-shadow: none; /* remove shadow */
+  width: 100%;
+  min-height: 100vh;
+  max-height: auto;
+  
+
+  
+  
+}
+
+.data-table {
+    
+    
+ width: 100%;                /* take full width of container */
+ 
+ 
+ 
+   
+
+}
+
+/* Table Header */
+.table-header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Search wrapper with icon inside input */
+.table-search-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 250px;
+  position: relative;
+}
+
+.table-search-wrapper .search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.table-search {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  border: none; /* remove input border */
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f1f1f1; /* subtle background for input */
+}
+
+/* Buttons */
+.table-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.emerald-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #016443;
+  color: #fff;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Table Styles - no borders */
+/* Table Styles */
+
+.table-wrapper {
+  width: 90%;
+  
+  overflow-x: auto;     /* allow scroll only if needed */
+  -ms-overflow-style: none;  /* hide scrollbar in IE/Edge */
+  scrollbar-width: thin;     /* scroll only if needed */
+ 
+  /* scrollbar-width: none; */
+}
+
+
+.table-wrapper::-webkit-scrollbar {
+  height: 6px;          /* horizontal scrollbar height */
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+
+/* .table-wrapper::-webkit-scrollbar {
+  display: none;
+} */
+
+.table {
+  width: 100%;
+ 
+  border-collapse: collapse; /* needed for solid borders */
+  background-color: #fff; /* table body white for contrast */
+
+  
+ 
+}
+
+/* Table Header */
+.table th {
+  background-color: #f5f5f5; /* match container very light gray */
+  color: #333; /* dark gray text */
+  font-weight: 600;
+  padding: 12px 16px;
+  border: 1px solid #ccc; /* solid border between columns */
+  text-align: left;
+ 
+}
+
+/* Table Body */
+.table td {
+  padding: 12px 16px;
+  border: 1px solid #ccc; /* solid border between rows and columns */
+  text-align: left;
+  
+}
+
+
+
+/* Status */
+.status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.status.active {
+  background-color: #d1fae5;
+  color: #016443;
+}
+
+.status.inactive {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.action-icons {
+ 
+  justify-content: center;
+  gap: 8px;
+  padding: 0;            /* remove extra padding */
+  margin: 0;
+  height: auto;          /* don't stretch row */
+  white-space: nowrap;   /* prevent wrapping */
+}
+
+/* Icon styling */
+.action-icons svg {
+  cursor: pointer;
+  color: #555;
+  margin-right: 10px;
+  transition: 0.15s ease;
+}
+
+.action-icons svg:hover {
+  color: #016443;
+  transform: scale(1.1);
+}
+
+/* Table Header & Body hover (optional nice effect) */
+.table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+
+
+
+.table-footer {
+  width: 80%;
+  display: flex;
+  justify-content: space-between; /* pagination left, info right */
+  align-items: center;
+  margin-top: 10px;
+  font-family: sans-serif;
+}
+
+/* Info text */
+.table-info {
+  color: rgba(0, 0, 0, 0.6); /* light black color */
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.table input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+/* Hover effect */
+.table input[type="checkbox"]:hover {
+  border-color: #016443;
+}
+
+/* Checked state */
+.table input[type="checkbox"]:checked {
+  background-color: #016443;
+  border-color: #016443;
+}
+
+/* Checkmark using pseudo-element */
+.table input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .table th,
+  .table td {
+    font-size: 13px; /* slightly smaller */
+    padding: 8px 10px; /* reduce padding to fit */
+  }
+
+  .table-wrapper {
+    max-width: 100%;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    font-size: 12px; /* smaller for mobile */
+    padding: 6px 8px;
+  }
+
+  .table input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Extra small / small phones */
+@media (max-width: 480px) {
+  .table th,
+  .table td {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+
+  .table input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+
+
+@media (max-width: 1200px) {
+  .table-search-wrapper {
+    flex: 1 1 100%; /* take full width */
+    max-width: 100%;
+    margin-bottom: 10px; /* add some spacing below */
+  }
+
+  .table-search {
+    width: 100%; /* full width input */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sale Data Table   */
+
+.sale-total-amount-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  margin-top: 15px;
+  border-radius: 8px;
+  background: #f0fdf4; /* light emerald */
+  border: 1px solid #34d399; /* emerald border */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #065f46; /* dark green */
+  transition: all 0.2s ease-in-out;
+}
+
+.sale-total-amount-box:hover {
+  background: #dcfce7; /* slightly brighter on hover */
+}

@@ -1,0 +1,48 @@
+.filter-bar {
+  display: flex;
+  justify-content: space-between; /* same as bulk-action-bar */
+  align-items: center;
+  background: #f8fafc;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 10px; /* same gap as bulk-controls */
+  align-items: center;
+}
+
+.filter-select {
+  padding: 6px 10px; /* same as bulk-select */
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  min-width: 160px;
+}
+
+.apply-btn {
+  background: var(--emerald); /* same emerald background */
+  color: white;
+  padding: 6px 12px; /* match bulk-action-bar */
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+}
+
+.apply-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  padding: 6px 12px; /* match bulk-action-bar */
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #f1f5f9;
+}
