@@ -3,7 +3,7 @@
 
  //export const apiUrl = "https://sasmedipro.com/api";
 
-export const apiUrl = "https://app.sasmedipro.com/api";
+export const apiUrl = "";
 
 export const playstoreUrl = "Your playStoreUrl";
 
