@@ -1,7 +1,5 @@
 // Base URLs
-//export const apiUrl = "http://localhost:8000/api";
 
- //export const apiUrl = "https://sasmedipro.com/api";
 
 export const apiUrl = "";
 
@@ -14,8 +12,8 @@ export const headers = {
 };
 
 // Headers with token
-export const headersToken = (token) => ({
-  "Accept": "application/json",
-  "Content-Type": "application/json",
-  "Authorization": `Bearer ${token}`,
-});
+// export const headersToken = (token) => ({
+//   "Accept": "application/json",
+//   "Content-Type": "application/json",
+//   "Authorization": `Bearer ${token}`,
+// });
